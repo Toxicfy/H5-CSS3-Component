@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif
+}
+
+.tabs {
+  width: 680px;
+  padding: 5px;
+  margin: 80px auto;
+}
+
+.menus {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.menu {
+  height: 40px;
+  line-height: 40px;
+  width: 120px;
+  border: none;
+  outline: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.menu.checked {
+  background: #F7A3A3;
+  height: 48px;
+
+}
+
+.panels {
+  background: buttonface;
+  min-height: 315px;
+  border-radius: 0 10px 10px 10px;
+  position: relative;
+}
+
+.panel {
+  width: 100%;
+  opacity: 0;
+  transition: .7s;
+  position: absolute;
+  transition: opacity 0.2s;
+}
+.panel p{
+  padding:30px 15px;
+  font-size: 20px;
+}
+
+.panel.show {
+  opacity: 1;
+}

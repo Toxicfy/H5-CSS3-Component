@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>跟随页面元素</title>
+  <style>
+    body {
+      min-height: 4000px;
+    }
+
+    .follow {
+      position: relative;
+      width: 80px;
+      height: 190px;
+      background: #738F9B;
+      transition: all .5s;
+    }
+
+    .follow ul {
+      list-style: none;
+      margin: 10px auto;
+      padding: 0px;
+      width: auto;
+    }
+
+    .follow li {
+      padding: 5px 10px;
+      text-align: center;
+      border-bottom: 1px solid #A1CED3;
+    }
+
+    .follow li a {
+      color: #dde4ec;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="follow">
+    <ul>
+      <li><a href="#">Tag 1</a></li>
+      <li><a href="#">Tag 2</a></li>
+      <li><a href="#">Tag 3</a></li>
+      <li><a href="#">Tag 4</a></li>
+      <li><a href="#">Tag 5</a></li>
+      <li><a href="#">Tag 6</a></li>
+    </ul>
+  </div>
+  <script>
+    const follow = document.querySelector('.follow');
+    window.onscroll = (e) => {
+      if (document.body.scrollTop > 20) {
+        console.log(document.body.scrollTop);
+        follow.style.top = (document.body.scrollTop) + 'px';
+      }
+    }
+  </script>
+</body>
+
+</html>
